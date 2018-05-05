@@ -12359,7 +12359,7 @@ body.modal-open {
 }
 
 .comment-row-item.selected {
-    background-color: #ecf2f5
+    background-color: #3752f5
 }
 
 .hover-action .comment-row-item .comment-row-item-action {
@@ -15818,4 +15818,10 @@ body.sidebar-hidden .side-menu-addl + .page-content {
         padding-left: 0;
         padding-right: 0
     }
+}
+
+.menu-selected{
+    font-weight:bold;
+    background: #e9eaeb;
+    color: #989898;
 }

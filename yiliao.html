@@ -28,211 +28,246 @@
 </head>
 <body class="with-side-menu control-panel control-panel-compact">
 
-	<header class="site-header">
-	    <div class="container-fluid">
-	        <a href="#" class="site-logo">
-	            <img class="hidden-md-down" src="img/logo-2.png" alt="">
-	            <img class="hidden-lg-down" src="img/logo-2-mob.png" alt="">
-	        </a>
-	
-	        <button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
-	            <span>toggle menu</span>
-	        </button>
-	
-	        <button class="hamburger hamburger--htla">
-	            <span>toggle menu</span>
-	        </button>
-	        <div class="site-header-content">
-	            <div class="site-header-content-in">
-	                <div class="site-header-shown">
-	                    <div class="dropdown dropdown-notification notif">
-	                        <a href="#"
-	                           class="header-alarm dropdown-toggle active"
-	                           id="dd-notification"
-	                           data-toggle="dropdown"
-	                           aria-haspopup="true"
-	                           aria-expanded="false">
-	                            <i class="font-icon-alarm"></i>
-	                        </a>
-	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
-	                            <div class="dropdown-menu-notif-header">
-	                                Notifications
-	                                <span class="label label-pill label-danger">4</span>
-	                            </div>
-	                            <div class="dropdown-menu-notif-list">
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-1.jpg" alt="">
-	                                    </div>
-	                                    <div class="dot"></div>
-	                                    <a href="#">Morgan</a> was bothering about something
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-2.jpg" alt="">
-	                                    </div>
-	                                    <div class="dot"></div>
-	                                    <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-3.jpg" alt="">
-	                                    </div>
-	                                    <div class="dot"></div>
-	                                    <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-4.jpg" alt="">
-	                                    </div>
-	                                    <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                            </div>
-	                            <div class="dropdown-menu-notif-more">
-	                                <a href="#">See more</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	
-	                    <div class="dropdown dropdown-notification messages">
-	                        <a href="#"
-	                           class="header-alarm dropdown-toggle active"
-	                           id="dd-messages"
-	                           data-toggle="dropdown"
-	                           aria-haspopup="true"
-	                           aria-expanded="false">
-	                            <i class="font-icon-mail"></i>
-	                        </a>
-	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-messages" aria-labelledby="dd-messages">
-	                            <div class="dropdown-menu-messages-header">
-	                                <ul class="nav" role="tablist">
-	                                    <li class="nav-item">
-	                                        <a class="nav-link active"
-	                                           data-toggle="tab"
-	                                           href="#tab-incoming"
-	                                           role="tab">
-	                                            Inbox
-	                                            <span class="label label-pill label-danger">8</span>
-	                                        </a>
-	                                    </li>
-	                                    <li class="nav-item">
-	                                        <a class="nav-link"
-	                                           data-toggle="tab"
-	                                           href="#tab-outgoing"
-	                                           role="tab">Outbox</a>
-	                                    </li>
-	                                </ul>
-	                                <!--<button type="button" class="create">
-	                                    <i class="font-icon font-icon-pen-square"></i>
-	                                </button>-->
-	                            </div>
-	                            <div class="tab-content">
-	                                <div class="tab-pane active" id="tab-incoming" role="tabpanel">
-	                                    <div class="dropdown-menu-messages-list">
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burton</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burton</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something...</span>
-	                                        </a>
-	                                    </div>
-	                                </div>
-	                                <div class="tab-pane" id="tab-outgoing" role="tabpanel">
-	                                    <div class="dropdown-menu-messages-list">
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burton</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something...</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burtons</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="dropdown-menu-notif-more">
-	                                <a href="#">See more</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	
-	                    <div class="dropdown user-menu">
-	                        <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                            <img src="img/avatar-2-64.png" alt="">
-	                        </button>
-	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
-	                            <div class="dropdown-divider"></div>
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
-	                        </div>
-	                    </div>
-	
-	                    <button type="button" class="burger-right">
-	                        <i class="font-icon-menu-addl"></i>
-	                    </button>
-	                </div><!--.site-header-shown-->
-	
-	                <div class="mobile-menu-right-overlay"></div>
+<header class="site-header">
+	<div class="container-fluid">
+		<a href="#" class="site-logo">
+			<img class="hidden-md-down" src="img/logo-2.png" alt="">
+			<img class="hidden-lg-down" src="img/logo-2-mob.png" alt="">
+		</a>
 
-	            </div><!--site-header-content-in-->
-	        </div><!--.site-header-content-->
-	    </div><!--.container-fluid-->
-	</header><!--.site-header-->
+		<button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
+			<span>toggle menu</span>
+		</button>
 
+		<button class="hamburger hamburger--htla">
+			<span>toggle menu</span>
+		</button>
+		<div class="site-header-content">
+			<div class="site-header-content-in">
+				<div class="site-header-shown">
+					<div class="dropdown dropdown-notification messages">
+						<a href="#"
+						   class="header-alarm dropdown-toggle active"
+						   id="dd-messages"
+						   data-toggle="dropdown"
+						   aria-haspopup="true"
+						   aria-expanded="false">
+							<i class="font-icon-alarm"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right dropdown-menu-messages" aria-labelledby="dd-messages">
+							<div class="dropdown-menu-messages-header">
+								<ul class="nav" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active"
+										   data-toggle="tab"
+										   href="#tab-incoming"
+										   role="tab">通知 &nbsp;<span class="label label-pill label-success">4</span>
+										</a>
+									</li>
+								</ul>
+								<!--<button type="button" class="create">
+                                    <i class="font-icon font-icon-pen-square"></i>
+                                </button>-->
+							</div>
+							<div class="tab-content">
+								<div class="tab-pane active" id="tab-incoming" role="tabpanel">
+									<div class="dropdown-menu-messages-list">
+										<a href="#" class="mess-item">
+											<span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+											<span class="mess-item-name">通知助手</span>
+											<span class="mess-item-txt" title="关键词[旅游]出现次数已经达到阈值[10]次,请及时查看">关键词[旅游]出现次数已经达到阈值[10]次,请及时查看</span>
+										</a>
+										<a href="#" class="mess-item">
+											<span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+											<span class="mess-item-name">通知助手</span>
+											<span class="mess-item-txt" title="旅游智能决策结果已经生成,请及时查看">旅游智能决策结果已经生成,请及时查看</span>
+										</a>
+										<a href="#" class="mess-item">
+											<span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+											<span class="mess-item-name">通知助手</span>
+											<span class="mess-item-txt" title="旅游政策模拟结果已经生成,请及时查看">旅游政策模拟结果已经生成,请及时查看</span>
+										</a>
+										<a href="#" class="mess-item">
+											<span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+											<span class="mess-item-name">通知助手</span>
+											<span class="mess-item-txt" title="旅游智能决策专家已反馈,请及时查看">旅游智能决策专家已反馈,请及时查看</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<!--<div class="dropdown-menu-notif-more">-->
+							<!--<a href="#">See more</a>-->
+							<!--</div>-->
+						</div>
+					</div>
+
+
+					<div class="dropdown user-menu">
+						<button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img src="img/photo-64-1.jpg" alt="">
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+							<a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>个人中心</a>
+							<a class="dropdown-item" href="sign-in.html"><span class="font-icon glyphicon glyphicon-log-out"></span>退出登录</a>
+						</div>
+					</div>
+
+					<button type="button" class="burger-right">
+						<i class="font-icon-menu-addl"></i>
+					</button>
+				</div><!--.site-header-shown-->
+
+				<div class="mobile-menu-right-overlay"></div>
+				<div class="site-header-collapsed">
+					<div class="site-header-collapsed-in">
+						<div class="dropdown dropdown-typical">
+							<div class="dropdown-menu" aria-labelledby="dd-header-sales">
+								<a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+								<a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+								<a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+								<a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+								<a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+							</div>
+						</div>
+
+					</div><!--.site-header-collapsed-in-->
+				</div><!--.site-header-collapsed-->
+			</div><!--site-header-content-in-->
+		</div><!--.site-header-content-->
+	</div><!--.container-fluid-->
+</header><!--.site-header-->
 	<div class="mobile-menu-left-overlay"></div>
 
 	<nav class="side-menu">
-	    <ul class="side-menu-list">
-	        <li class="grey with-sub">
+		<ul class="side-menu-list">
+			<li class="green with-sub">
 	            <span>
-	                <i class="font-icon font-icon-dashboard"></i>
+	                <i class="font-icon font-icon-chart-2"></i>
 	                <span class="lbl">民情分析</span>
 	            </span>
-	            <ul>
-	                <li><a href="index.html"><span class="lbl">综合民情</span><span class="label label-custom label-pill label-danger">全国</span></a></li>
-	                <li><a href="dashboard-top-menu.html"><span class="lbl">城市旅游</span></a></li>
-	                <li><a href="side-menu-compact-full.html"><span class="lbl">城市就业</span></a></li>
-	                <li><a href="dashboard-addl-menu.html"><span class="lbl">城市房产</span></a></li>
-	                <li><a href="side-menu-avatar.html"><span class="lbl">城市教育</span></a></li>
-	                <li><a href="yiliao.html"><span class="lbl">城市医疗</span></a></li>
-	                <li><a href="yanglao.html"><span class="lbl">城市养老</span></a></li>
-	                <li><a href="environmental.html"><span class="lbl">城市环保</span></a></li>
-	                <li><a href="dark-menu-green.html"><span class="lbl">城市文化</span></a></li>
-	            </ul>
-	        </li>
-	    </ul>
+				<ul>
+					<li><a href="index.html"><span class="lbl">综合民情</span></a></li>
+					<li><a href="travel.html"><span class="lbl">城市旅游</span></a></li>
+					<li><a href="job.html"><span class="lbl">城市就业</span></a></li>
+					<li><a href="travel55.html"><span class="lbl">城市房产</span></a></li>
+					<li><a href="jiaoyu.html"><span class="lbl">城市教育</span></a></li>
+					<li class="menu-selected"><a href="yiliao.html"><span class="lbl">城市医疗</span></a></li>
+					<li><a href="yanglao.html"><span class="lbl">城市养老</span></a></li>
+					<li><a href="environmental.html"><span class="lbl">城市环保</span></a></li>
+					<!--<li><a href="dark-menu-green.html"><span class="lbl">城市文化</span></a></li>-->
+				</ul>
+			</li>
+			<li class="gold with-sub">
+	            <span>
+	                <i class="font-icon glyphicon glyphicon-lamp"></i>
+	                <span class="lbl">智能决策</span>
+	            </span>
+				<ul>
+					<li><a href="form-steps1.html"><span class="lbl">智能旅游决策</span></a></li>
+					<!--<li><a href="#"><span class="lbl">智能就业决策</span></a></li>-->
+				</ul>
+			</li>
+			<li class="blue-darker with-sub">
+	            <span>
+	                <i class="font-icon glyphicon font-icon-sound"></i>
+	                <span class="lbl">政府回应</span>
+	            </span>
+				<ul>
+					<!--<li><a href="theme-side-ebony-clay.html"><span class="lbl">政策回应</span></a></li>-->
+					<li class="with-sub">
+	                    <span>
+	                        <span class="lbl">政策回应</span>
+	                    </span>
+						<ul>
+							<li><a href="answer.html"><span class="lbl">旅游政策回应</span></a></li>
+							<!--<li><a href="#"><span class="lbl">就业政策回应</span></a></li>-->
+						</ul>
+					</li>
+					<!--<li><a href="tabs1.html"><span class="lbl">政策效果</span></a></li>-->
+					<li class="with-sub">
+	                    <span>
+	                        <span class="lbl">政策效果</span>
+	                    </span>
+						<ul>
+							<li><a href="tabs1.html"><span class="lbl">旅游政策效果</span></a></li>
+							<!--<li><a href="#"><span class="lbl">旅游政策效果</span></a></li>-->
+						</ul>
+					</li>
+
+				</ul>
+			</li>
+			<li class="purple with-sub">
+	            <span>
+	                <i class="font-icon glyphicon glyphicon-search"></i>
+	                <span class="lbl">调查管理</span>
+	            </span>
+				<ul>
+					<li><a href="answer2.html"><span class="lbl">问卷库管理</span></a></li>
+					<li><a href="answer3.html"><span class="lbl">问卷调查</span></a></li>
+					<li><a href="travel8.html"><span class="lbl">调查历史</span></a></li>
+					<!--<li><a href="chat-write.html"><span class="lbl">微信公众号</span></a></li>-->
+					<!--<li><a href="chat-index.html"><span class="lbl">微信小程序</span></a></li>-->
+				</ul>
+			</li>
+			<li class="gold with-sub">
+	            <span>
+	                <i class="font-icon font-icon-edit"></i>
+	                <span class="lbl">智能入库</span>
+	            </span>
+				<ul>
+					<li><a href="answer33.html"><span class="lbl">智能导入</span></a></li>
+				</ul>
+			</li>
+
+			<li class="green">
+				<a href="security.html">
+					<i class="font-icon glyphicon glyphicon-send"></i>
+					<span class="lbl">安全指数</span>
+				</a>
+			</li>
+			<li class="red with-sub">
+	            <span>
+	                <i class="font-icon font-icon-warning-circle"></i>
+	                <span class="lbl">智能预警</span>
+	            </span>
+				<ul>
+					<!--<li><a href="ui-form.html"><span class="lbl">触发词典</span></a></li>-->
+					<li><a href="select3.html"><span class="lbl">预警配置</span></a></li>
+					<li><a href="ui-select9.html"><span class="lbl">预警管理</span></a></li>
+				</ul>
+			</li>
+			<li class="blue-sky  with-sub">
+	            <span>
+	                <i class="font-icon glyphicon glyphicon-cog"></i>
+	                <span class="lbl">参数配置</span>
+	            </span>
+				<ul>
+					<li><a href="ui-form2.html"><span class="lbl">权重配置</span></a></li>
+					<li><a href="ui-select92.html"><span class="lbl">权重管理</span></a></li>
+					<li><a href="select31.html"><span class="lbl">抓取配置</span></a></li>
+					<li><a href="ui-select91.html"><span class="lbl">抓取管理</span></a></li>
+				</ul>
+			</li>
+			<li class="brown">
+				<a href="contacts.html" class="label-right">
+					<i class="font-icon glyphicon glyphicon-user"></i>
+					<span class="lbl">专家管理</span>
+					<!--<span class="label label-custom label-pill label-danger">35</span>-->
+				</a>
+			</li>
+			<li class="aquamarine">
+				<a href="#">
+					<i class="font-icon glyphicon glyphicon-hd-video"></i>
+					<span class="lbl">政务大屏</span>
+				</a>
+			</li>
+			<li class="blue">
+				<a href="travel22.html">
+					<i class="font-icon glyphicon glyphicon-briefcase"></i>
+					<span class="lbl">政策管理</span>
+				</a>
+			</li>
+		</ul>
 
 	</nav><!--.side-menu-->
 
