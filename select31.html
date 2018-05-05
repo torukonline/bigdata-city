@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="css/separate/vendor/tags_editor.min.css">
 <link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
 <link rel="stylesheet" href="css/separate/vendor/select2.min.css">
+	<link rel="stylesheet" href="css/lib/bootstrap-sweetalert/sweetalert.css">
     <link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
     <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -255,7 +256,7 @@
 				</a>
 			</li>
 			<li class="aquamarine">
-				<a href="#">
+				<a href="https://datav.aliyun.com/share/3908608da952e806fa6f125e1914a394">
 					<i class="font-icon glyphicon glyphicon-hd-video"></i>
 					<span class="lbl">政务大屏</span>
 				</a>
@@ -275,12 +276,7 @@
 				<div class="tbl">
 					<div class="tbl-row">
 						<div class="tbl-cell">
-							<h3>Selects</h3>
-							<ol class="breadcrumb breadcrumb-simple">
-								<li><a href="#">StartUI</a></li>
-								<li><a href="#">Forms</a></li>
-								<li class="active">Selects</li>
-							</ol>
+							<h3>数据来源抓取配置</h3>
 						</div>
 					</div>
 				</div>
@@ -294,9 +290,11 @@
 							<select class="select2">
 								<option>旅游</option>
 								<option>就业</option>
-								<option>Prep test</option>
-								<option>Catprep test</option>
-								<option>Long long long extra long example line long long long extra long example line </option>
+								<option>房产</option>
+								<option>教育</option>
+								<option>医疗</option>
+								<option>养老</option>
+								<option>环保</option>
 							</select>
 							<br/>
 							<br/>
@@ -310,10 +308,10 @@
 
 						<div class="col-md-3">
 							<select class="select2-photo">
-								<option data-photo="img/photo-64-1.jpg">大数据平台</option>
-								<option data-photo="img/photo-64-2.jpg">Elliot Fu</option>
-								<option data-photo="img/photo-64-3.jpg">Stevie Felicano</option>
-								<option data-photo="img/photo-64-4.jpg">Christian</option>
+								<option data-photo="img/photo-64-15.jpg">智能城市治理平台</option>
+								<option data-photo="img/photo-64-15.jpg">民生大数据平台</option>
+								<!--<option data-photo="img/photo-64-3.jpg">Stevie Felicano</option>-->
+								<!--<option data-photo="img/photo-64-4.jpg">Christian</option>-->
 							</select>
 							<br/>
 							<br/>
@@ -323,13 +321,13 @@
 					<h5 class="with-border m-t-lg">填写需要抓取的网站（网站名称或域名）</h5>
 					<div class="row">
 						<div class="col-lg-12">
-							<textarea id="tags-editor-textarea">example,example,example</textarea>
+							<textarea id="tags-editor-textarea">天涯论坛,百度贴吧,自入网</textarea>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="form-group" style="margin-top: 30px">
-							<button type="button" class="btn btn-inline btn-primary">保存</button>
+							<button type="button" class="btn btn-inline btn-primary" id="swal-btn-success">保存</button>
 							</div>
 						</div>
 					</div>
@@ -354,7 +352,19 @@
 			$('#tags-editor-textarea').tagEditor();
 		});
 	</script>
-
+<script src="js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $('#swal-btn-success').click(function(e){
+        e.preventDefault();
+        swal({
+            title: "添加成功!",
+            text: "我们会尽快处理您的抓取请求!",
+            type: "success",
+            confirmButtonClass: "btn-success",
+            confirmButtonText: "确认"
+        });
+    });
+    </script>
 <script src="js/app.js"></script>
 </body>
 </html>

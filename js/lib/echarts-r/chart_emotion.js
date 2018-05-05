@@ -28,7 +28,7 @@ option = {
     }],
     yAxis: [{
         type: 'value',
-        name: '总价(万元)',
+        name: '情感指数',
         axisLabel: {
             formatter: '{value}'
         }
