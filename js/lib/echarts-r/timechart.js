@@ -12,9 +12,6 @@ option1 = {
             }
         }
     },
-    legend: {
-        data:['旅游相关']
-    },
     toolbox: {
         show: true,
         feature: {

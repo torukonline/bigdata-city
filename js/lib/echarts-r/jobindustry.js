@@ -1,21 +1,17 @@
 var jobChart = echarts.init(document.getElementById('jobindustry'));
 option = {
     backgroundColor:'#FFF',
-    /* title : {
-         text: '事项申请对比分析',
-         subtext: '2017年'
-     },*/
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     legend: {
         x: 'left',
-        data:['餐饮服务经营者','单位食堂','普通餐饮','中央厨房','集体用餐配送单位','学校食堂','托幼机构食堂','职工食堂','工地食堂','其他']
+        data:['互联网行业','金融行业','教育行业','快速消费品行业','医疗行业','房地产行业','电子商务']
     },
     series: [
         {
-            name:'访问来源',
+            name:'传统行业',
             type:'pie',
             selectedMode: 'single',
             radius: [0, '30%'],
@@ -34,13 +30,14 @@ option = {
                 }
             },
             data:[
-                //{value:335, name:'食品生产', selected:true},
-                {value:7800, name:'餐饮服务\n经营者'},
-                {value:4500, name:'单位食堂'}
+                {value:27392, name:'教育行业'},
+                {value:15247, name:'医疗行业'},
+                {value:3963, name:'房地产行业'},
+                {value:3963, name:'快速消费品行业'}
             ]
         },
         {
-            name:'访问来源',
+            name:'创新型行业',
             type:'pie',
             radius: ['35%', '45%'],
             // center: [330, 300],
@@ -52,22 +49,9 @@ option = {
             },
 
             data:[
-                {value:1103, name:'特大型餐馆'},
-                {value:1257, name:'大型餐馆'},
-                {value:1281, name:'小型餐馆'},
-                {value:1349, name:'快餐店'},
-                {value:1394, name:'小吃店'},
-                {value:1106, name:'饮品店'},
-                {value:600, name:'中央厨房'},
-                {value:460, name:'集体用餐配送单位'},
-
-
-
-                {value:1500, name:'学校食堂'},
-                {value:700, name:'托幼机构食堂'},
-                {value:1060, name:'职工食堂'},
-                {value:920, name:'工地食堂'},
-                {value:800, name:'其他'}
+                {value:1103, name:'互联网行业'},
+                {value:1257, name:'金融行业'},
+                {value:1281, name:'电子商务'}
             ]
         }
     ]
