@@ -331,66 +331,7 @@
 
 
 
-			<!--<div class="row">-->
-				<!--<div class="col-lg-12">-->
-				<!--<header class="section-header">-->
-					<!--<div class="tbl">-->
-						<!--<div class="tbl-row">-->
-							<!--<div class="tbl-cell">-->
-								<!--<h3>请您选择调研类型</h3>-->
-							<!--</div>-->
-						<!--</div>-->
-					<!--</div>-->
-				<!--</header>-->
 
-
-					<!--<section>-->
-						<!--&lt;!&ndash;<div id="no-drop" class="draggable drag-drop"> 123 </div>&ndash;&gt;-->
-						<!--<div class="row">-->
-							<!--<div class="col-xl-12">-->
-								<!--<section class="box-typical">-->
-									<!--<div id="toolbar">-->
-										<!--<div class="bootstrap-table-header">问卷调查-问卷库</div>-->
-										<!--<button id="remove" class="btn btn-success" disabled>-->
-											<!--<i class="font-icon font-icon-speed"></i> 线下问卷-->
-										<!--</button>-->
-
-										<!--<button id="remove1" class="btn btn-warning" disabled>-->
-											<!--<i class="font-icon font-icon-answer"></i> 线上问卷-->
-										<!--</button>-->
-									<!--</div>-->
-									<!--<div class="table-responsive">-->
-										<!--<table id="table"-->
-											   <!--class="table table-striped"-->
-											   <!--data-toolbar="#toolbar"-->
-											   <!--data-search="true"-->
-											   <!--data-show-refresh="true"-->
-											   <!--data-show-toggle="true"-->
-											   <!--data-show-columns="true"-->
-											   <!--data-show-export="true"-->
-											   <!--data-detail-view="true"-->
-											   <!--data-detail-formatter="政策解读：就在最近同学们五一假期玩撒欢的时候，我们迎来了一件大事。没错！聪明的同学已经知道是增值税改革了！"-->
-											   <!--data-minimum-count-columns="2"-->
-											   <!--data-show-pagination-switch="true"-->
-											   <!--data-pagination="true"-->
-											   <!--data-id-field="id"-->
-											   <!--data-page-list="[10, 25, 50, 100, ALL]"-->
-											   <!--data-show-footer="false"-->
-											   <!--data-response-handler="responseHandler">-->
-										<!--</table>-->
-									<!--</div>-->
-								<!--</section>&lt;!&ndash;.box-typical&ndash;&gt;-->
-							<!--</div>-->
-
-						<!--</div>-->
-
-
-
-
-
-					<!--</section>-->
-				<!--</div>-->
-			<!--</div>-->
 
 			<div class="row">
 				<div class="col-lg-12">
@@ -489,32 +430,6 @@
 
 
 
-
-					<!--<section class="card mb-4">-->
-				<!--<header class="card-header">-->
-					<!--智能政策分析-->
-					<!--<button type="button" class="modal-close">-->
-						<!--<i class="font-icon-close-2"></i>-->
-					<!--</button>-->
-				<!--</header>-->
-				<!--<div class="card-block">-->
-					<!--<div id="example-basic">-->
-						<!--<h3>问题总结</h3>-->
-						<!--<section>-->
-							<!--HTML-->
-						<!---->
-						<!--</section>-->
-						<!--<h3>分析模型</h3>-->
-						<!--<section>-->
-							<!--<p>Wonderful transition effects.</p>-->
-						<!--</section>-->
-						<!--<h3>开始分析</h3>-->
-						<!--<section>-->
-							<!--<p>The next and previous buttons help you to navigate through your content.</p>-->
-						<!--</section>-->
-					<!--</div>-->
-				<!--</div>-->
-			<!--</section>-->
 
 		</div><!--.container-fluid-->
 	</div><!--.page-content-->
@@ -742,227 +657,98 @@
 
                     $("#resultid").show()
                     var resultidChart = echarts.init(document.getElementById('resultid'));
-                    var builderJson = {
-                        "all": 10887,
-                        "charts": {
-                            "外观": 3237,
-                            "质感": 2164,
-                            "发动机": 7561,
-                            "软件": 7778,
-                            "座位": 7355,
-                            "高端大气": 2405,
-                            "科技感": 1842,
-                            "细节": 2090,
-                            "内饰": 1762,
-                            "持久": 1593,
-                            "省油": 2060,
-                            "拉风": 1537,
-                            "流线型": 1908,
-                            "独特": 2107,
-                            "引擎": 1692,
-                            "加速度": 1568
-                        },
-                        "components": {
-                            "质量差": 2788,
-                            "售后糟糕": 9575,
-                            "阉割版": 9400,
-                            "噪音": 9466,
-                            "做工粗糙": 9266,
-                            "广告过度": 3419,
-                            "线条过硬": 2984,
-                            "塑料感": 2739,
-                            "钥匙": 2744,
-                            "熄火": 2466,
-                            "生锈": 3034,
-                            "抖动": 1945
-                        },
-                        "ie": 9743
-                    };
-
-                    var downloadJson = {
-                        "XX网": 17365,
-                        "今日头条": 4079,
-                        "YY资讯": 6929,
-                        "汽车之家": 14890,
-                        "ZZ站点":4232
-                    };
-
-                    var themeJson = {
-                        "XX网网站": 1594,
-                        "YY资讯": 925,
-                        "ZZ站点": 1608,
-                        "汽车之家": 721,
-                        "今日头条": 2179,
-                        "AA资讯": 1982
-                    };
-
-                    // var waterMarkText = '民生大数据';
-
-                    var canvas = document.createElement('canvas');
-                    var ctx = canvas.getContext('2d');
-                    canvas.width = canvas.height = 100;
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'middle';
-                    ctx.globalAlpha = 0.08;
-                    ctx.font = '20px Microsoft Yahei';
-                    ctx.translate(50, 50);
-                    ctx.rotate(-Math.PI / 4);
-                    // ctx.fillText(waterMarkText, 0, 0);
-
-                    resultidoption = {
-                        backgroundColor: {
-                            type: 'pattern',
-                            image: canvas,
-                            repeat: 'repeat'
-                        },
-                        tooltip: {},
-                        title: [{
-                            text: '正面内容',
-                            subtext: '总计 ' + builderJson.all,
-                            x: '25%',
-                            textAlign: 'center'
-                        }, {
-                            text: '正面内容来源',
-                            subtext: '总计 ' + Object.keys(downloadJson).reduce(function (all, key) {
-                                return all + downloadJson[key];
-                            }, 0),
-                            x: '75%',
-                            textAlign: 'center'
-                        }, {
-                            text: '负面内容来源',
-                            subtext: '总计 ' + Object.keys(themeJson).reduce(function (all, key) {
-                                return all + themeJson[key];
-                            }, 0),
-                            x: '75%',
-                            y: '50%',
-                            textAlign: 'center'
-                        }],
-                        grid: [{
-                            top: 50,
-                            width: '50%',
-                            bottom: '45%',
-                            left: 10,
-                            containLabel: true
-                        }, {
-                            top: '55%',
-                            width: '50%',
-                            bottom: 0,
-                            left: 10,
-                            containLabel: true
-                        }],
-                        xAxis: [{
-                            type: 'value',
-                            max: builderJson.all,
-                            splitLine: {
-                                show: false
-                            }
-                        }, {
-                            type: 'value',
-                            max: builderJson.all,
-                            gridIndex: 1,
-                            splitLine: {
-                                show: false
-                            }
-                        }],
-                        yAxis: [{
-                            type: 'category',
-                            data: Object.keys(builderJson.charts),
-                            axisLabel: {
-                                interval: 0,
-                                rotate: 30
-                            },
-                            splitLine: {
-                                show: false
-                            }
-                        }, {
-                            gridIndex: 1,
-                            type: 'category',
-                            data: Object.keys(builderJson.components),
-                            axisLabel: {
-                                interval: 0,
-                                rotate: 30
-                            },
-                            splitLine: {
-                                show: false
-                            }
-                        }],
-                        series: [{
-                            type: 'bar',
-                            stack: 'chart',
-                            z: 3,
-                            label: {
-                                normal: {
-                                    position: 'right',
-                                    show: true
-                                }
-                            },
-                            data: Object.keys(builderJson.charts).map(function (key) {
-                                return builderJson.charts[key];
-                            })
-                        }, {
-                            type: 'bar',
-                            stack: 'chart',
-                            silent: true,
-                            itemStyle: {
-                                normal: {
-                                    color: '#eee'
-                                }
-                            },
-                            data: Object.keys(builderJson.charts).map(function (key) {
-                                return builderJson.all - builderJson.charts[key];
-                            })
-                        }, {
-                            type: 'bar',
-                            stack: 'component',
-                            xAxisIndex: 1,
-                            yAxisIndex: 1,
-                            z: 3,
-                            label: {
-                                normal: {
-                                    position: 'right',
-                                    show: true
-                                }
-                            },
-                            data: Object.keys(builderJson.components).map(function (key) {
-                                return builderJson.components[key];
-                            })
-                        }, {
-                            type: 'bar',
-                            stack: 'component',
-                            silent: true,
-                            xAxisIndex: 1,
-                            yAxisIndex: 1,
-                            itemStyle: {
-                                normal: {
-                                    color: '#eee'
-                                }
-                            },
-                            data: Object.keys(builderJson.components).map(function (key) {
-                                return builderJson.all - builderJson.components[key];
-                            })
-                        }, {
-                            type: 'pie',
-                            radius: [0, '30%'],
-                            center: ['75%', '25%'],
-                            data: Object.keys(downloadJson).map(function (key) {
-                                return {
-                                    name: key.replace('.js', ''),
-                                    value: downloadJson[key]
-                                }
-                            })
-                        }, {
-                            type: 'pie',
-                            radius: [0, '30%'],
-                            center: ['75%', '75%'],
-                            data: Object.keys(themeJson).map(function (key) {
-                                return {
-                                    name: key.replace('.js', ''),
-                                    value: themeJson[key]
-                                }
-                            })
-                        }]
-                    }
-                    resultidChart.setOption(resultidoption);
+					option = {
+						title: {
+							text: '旅游满意度调查问卷统计',
+							center: 'top'
+						},
+						tooltip: {
+							trigger: 'axis',
+							axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+								type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+							}
+						},
+						legend: {
+							text: ['非常满意','满意','一般','不满意','非常不满意']
+						},
+						grid: {
+							left: '3%',
+							right: '4%',
+							bottom: '3%',
+							containLabel: true
+						},
+						yAxis:  {
+							type: 'value'
+						},
+						xAxis: {
+							type: 'category',
+							data: ['总体是否满意','交通是否满意','住宿是否满意','景点是否满意','服务是否满意','环境是否满意']
+						},
+						series: [
+							{
+								name: '非常满意',
+								type: 'bar',
+								stack: '总量',
+								label: {
+									normal: {
+										show: true,
+										position: 'insideRight'
+									}
+								},
+								data: [34, 20, 12, 24, 38, 32, 40, 45],
+								barWidth: '40%'
+							},
+							{
+								name: '满意',
+								type: 'bar',
+								stack: '总量',
+								label: {
+									normal: {
+										show: true,
+										position: 'insideRight'
+									}
+								},
+								data: [123, 112, 145, 155, 120, 169, 130, 122],
+								barWidth: '40%'
+							},
+							{
+								name: '一般',
+								type: 'bar',
+								stack: '总量',
+								label: {
+									normal: {
+										show: true,
+										position: 'insideRight'
+									}
+								},
+								data: [45, 46, 33, 21, 46,59, 45, 30]
+							},
+							{
+								name: '不满意',
+								type: 'bar',
+								stack: '总量',
+								label: {
+									normal: {
+										show: true,
+										position: 'insideRight'
+									}
+								},
+								data: [60, 55, 43, 33, 21, 55, 41, 61]
+							},{
+								name: '非常不满意',
+								type: 'bar',
+								stack: '总量',
+								label: {
+									normal: {
+										show: true,
+										position: 'insideRight'
+									}
+								},
+								data: [60, 55, 43, 33, 21, 55, 41, 61]
+							}
+						]
+					};
+                    resultidChart.setOption(option);
                 }, 2000);
             });
 

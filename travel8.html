@@ -309,22 +309,22 @@
 									</div>
 									<div class="table-responsive">
 										<table id="table"
-											   class="table table-striped"
-											   data-toolbar="#toolbar"
-											   data-search="true"
-											   data-show-refresh="true"
-											   data-show-toggle="true"
-											   data-show-columns="true"
-											   data-show-export="true"
-											   data-detail-view="true"
-											   data-detail-formatter="政策解读：就在最近同学们五一假期玩撒欢的时候，我们迎来了一件大事。没错！聪明的同学已经知道是增值税改革了！"
-											   data-minimum-count-columns="2"
-											   data-show-pagination-switch="true"
-											   data-pagination="true"
-											   data-id-field="id"
-											   data-page-list="[10, 25, 50, 100, ALL]"
-											   data-show-footer="false"
-											   data-response-handler="responseHandler">
+											   class="table table-striped">
+											   <!--data-toolbar="#toolbar"-->
+											   <!--data-search="true"-->
+											   <!--data-show-refresh="true"-->
+											   <!--data-show-toggle="true"-->
+											   <!--data-show-columns="true"-->
+											   <!--data-show-export="true"-->
+											   <!--data-detail-view="true"-->
+											   <!--data-detail-formatter="政策解读：就在最近同学们五一假期玩撒欢的时候，我们迎来了一件大事。没错！聪明的同学已经知道是增值税改革了！"-->
+											   <!--data-minimum-count-columns="2"-->
+											   <!--data-show-pagination-switch="true"-->
+											   <!--data-pagination="true"-->
+											   <!--data-id-field="id"-->
+											   <!--data-page-list="[10, 25, 50, 100, ALL]"-->
+											   <!--data-show-footer="false"-->
+											   <!--data-response-handler="responseHandler">-->
 										</table>
 									</div>
 								</section><!--.box-typical-->
@@ -344,9 +344,9 @@
 				<div class="col-xl-12  dahsboard-column">
 					<section class="box-typical box-typical-dashboard panel panel-default scrollable">
 						<header class="box-typical-header panel-heading">
-							<h3 class="panel-title">情感分析</h3>
+							<h3 class="panel-title">历史调查分析</h3>
 						</header>
-						<div class="box-typical-body panel-body" style="height: 600px" id="emotion">
+						<div class="box-typical-body panel-body" style="height: 600px" id="resultid">
 						</div><!--.box-typical-body-->
 					</section><!--.box-typical-dashboard-->
 
@@ -486,113 +486,105 @@
 	<script type="text/javascript" src="js/lib/lobipanel/lobipanel.min.js"></script>
 	<script type="text/javascript" src="js/lib/match-height/jquery.matchHeight.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script>
-		$(document).ready(function() {
-            $('.panel').each(function () {
-                try {
-                    $(this).lobiPanel({
-                        sortable: true
-                    }).on('dragged.lobiPanel', function(ev, lobiPanel){
-                        $('.dahsboard-column').matchHeight();
-                    });
-                } catch (err) {}
-            });
 
-			google.charts.load('current', {'packages':['corechart']});
-			google.charts.setOnLoadCallback(drawChart);
-			function drawChart() {
-				var dataTable = new google.visualization.DataTable();
-				dataTable.addColumn('string', 'Day');
-				dataTable.addColumn('number', 'Values');
-				// A column for custom tooltip content
-				dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
-				dataTable.addRows([
-					['MON',  130, ' '],
-					['TUE',  130, '130'],
-					['WED',  180, '180'],
-					['THU',  175, '175'],
-					['FRI',  200, '200'],
-					['SAT',  170, '170'],
-					['SUN',  250, '250'],
-					['MON',  220, '220'],
-					['TUE',  220, ' ']
-				]);
-
-				var options = {
-					height: 314,
-					legend: 'none',
-					areaOpacity: 0.18,
-					axisTitlesPosition: 'out',
-					hAxis: {
-						title: '',
-						textStyle: {
-							color: '#fff',
-							fontName: 'Proxima Nova',
-							fontSize: 11,
-							bold: true,
-							italic: false
-						},
-						textPosition: 'out'
-					},
-					vAxis: {
-						minValue: 0,
-						textPosition: 'out',
-						textStyle: {
-							color: '#fff',
-							fontName: 'Proxima Nova',
-							fontSize: 11,
-							bold: true,
-							italic: false
-						},
-						baselineColor: '#16b4fc',
-						ticks: [0,25,50,75,100,125,150,175,200,225,250,275,300,325,350],
-						gridlines: {
-							color: '#1ba0fc',
-							count: 15
-						}
-					},
-					lineWidth: 2,
-					colors: ['#fff'],
-					curveType: 'function',
-					pointSize: 5,
-					pointShapeType: 'circle',
-					pointFillColor: '#f00',
-					backgroundColor: {
-						fill: '#008ffb',
-						strokeWidth: 0,
-					},
-					chartArea:{
-						left:0,
-						top:0,
-						width:'100%',
-						height:'100%'
-					},
-					fontSize: 11,
-					fontName: 'Proxima Nova',
-					tooltip: {
-						trigger: 'selection',
-						isHtml: true
-					}
-				};
-
-				var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-				chart.draw(dataTable, options);
-			}
-			$(window).resize(function(){
-				drawChart();
-				setTimeout(function(){
-				}, 1000);
-			});
-		});
-	</script>
 	<script src="js/app.js"></script>
 	<script src="js/lib/echarts/echarts.min.js"></script>
 	<script type="text/javascript" src="js/lib/echarts/china.js"></script>
 	<script type="text/javascript" src="js/lib/echarts/map2.js"></script>
-	<script type="text/javascript" src="js/lib/echarts/emotion.js"></script>
 	<script src="js/lib/bootstrap-table/bootstrap-table.js"></script>
 	<script src="js/lib/bootstrap-table/bootstrap-table-export.min.js"></script>
 	<script src="js/lib/bootstrap-table/tableExport.min.js"></script>
-	<script src="js/lib/bootstrap-table/bootstrap-table-init.js"></script>
+	<script src="js/lib/bootstrap-table/lishidiaocha-table-init.js"></script>
+<script>
+	var resultidChart = echarts.init(document.getElementById('resultid'));
+	option = {
+		tooltip: {
+			trigger: 'axis',
+			axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+				type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+			}
+		},
+		legend: {
+			text: ['非常满意','满意','一般','不满意','非常不满意']
+		},
+		grid: {
+			left: '3%',
+			right: '4%',
+			bottom: '3%',
+			containLabel: true
+		},
+		yAxis:  {
+			type: 'value'
+		},
+		xAxis: {
+			type: 'category',
+			data: ['总体是否满意','交通是否满意','住宿是否满意','景点是否满意','服务是否满意','环境是否满意']
+		},
+		series: [
+			{
+				name: '非常满意',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [34, 20, 12, 24, 38, 32, 40, 45],
+				barWidth: '40%'
+			},
+			{
+				name: '满意',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [123, 112, 145, 155, 120, 169, 130, 122],
+				barWidth: '40%'
+			},
+			{
+				name: '一般',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [45, 46, 33, 21, 46,59, 45, 30]
+			},
+			{
+				name: '不满意',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [60, 55, 43, 33, 21, 55, 41, 61]
+			},{
+				name: '非常不满意',
+				type: 'bar',
+				stack: '总量',
+				label: {
+					normal: {
+						show: true,
+						position: 'insideRight'
+					}
+				},
+				data: [60, 55, 43, 33, 21, 55, 41, 61]
+			}
+		]
+	};
+	resultidChart.setOption(option);
+</script>
 </body>
 </html>

@@ -298,7 +298,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#tabs-3-tab-2" role="tab" data-toggle="tab">
+										<a class="nav-link" href="#tabs-3-tab-1" role="tab" data-toggle="tab">
 											<span class="nav-link-in">
 												<span class="number">旅游设施</span>
 												<span class="percent color-green">-24%</span>
@@ -307,7 +307,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#tabs-3-tab-3" role="tab" data-toggle="tab">
+										<a class="nav-link" href="#tabs-3-tab-1" role="tab" data-toggle="tab">
 											<span class="nav-link-in">
 												<span class="number">旅游交通</span>
 												<span class="percent color-red">+24%</span>
@@ -316,7 +316,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#tabs-3-tab-4" role="tab" data-toggle="tab">
+										<a class="nav-link" href="#tabs-3-tab-1" role="tab" data-toggle="tab">
 											<span class="nav-link-in">
 												<span class="number">旅游住宿</span>
 												<span class="percent color-green">-19%</span>
@@ -325,7 +325,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="#tabs-3-tab-4" role="tab" data-toggle="tab">
+										<a class="nav-link" href="#tabs-3-tab-1" role="tab" data-toggle="tab">
 											<span class="nav-link-in">
 												<span class="number">旅游餐饮</span>
 												<span class="percent color-green">-19%</span>
@@ -393,9 +393,14 @@
 	<script src="js/lib/echarts-r/chart_emotion_line.js"></script>
 	<script type="text/javascript">
         var chart_emotion_answer = echarts.init(document.getElementById('chart_emotion_answer'));
+
+		var data_zc = [
+			'关于组织开展2018年“中国旅游日”活动的通知', '2017年全国旅游教育培训统计','关于做好2018年取得导游资格证人员办理导游证工作的通知'
+		];
+
         chart_emotion_answer_option ={
             title: {
-                text: '政策回应'
+                text: '旅游政策时间轴'
             },
             tooltip: {
                 trigger: 'axis',
@@ -403,68 +408,36 @@
                     type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
                 }
             },
-            legend: {
-                data: ['旅游服务指数'],
-                align: 'right',
-                right: 10
-            },
             grid: {
-                // left: '3%',
-                // right: '4%',
-                // bottom: '3%',
                 containLabel: true
             },
 
             xAxis: [{
                 type: 'category',
                 axisTick: {show: false},
-                data: ['2018-04-23', '2018-04-24', '2018-04-25','2018-04-26', '2018-04-27', '2018-04-28', '2018-04-29', '2018-04-30', '2018-05-01', '2018-05-02']
+                data: ['2018-04-28','2018-04-26', '2018-04-19']
             }],
             yAxis: [{
-                type: 'category',
-                name: '周指数',
-                // axisLabel: {
-                //     formatter: '{value}'
-                // }
+                type: 'value',
             }],
             // barWidth:20,
             // barGap:'0%',
             series: [{
-                name: '旅游服务指数',
                 type: 'scatter',
-                symbolSize: 60,
+                symbolSize: 40,
                 symbol: 'circle',
-                data: [10,20,10,20, 10, 20, 10, 20, 10, 20],
+                data: [10,20,10],
                 itemStyle:  {normal: {color:'#95CC4F'}},
                 label: {
                     show:true,
                     // position:'top',
                     formatter(param){
-                        return "旅游政策"+param.dataIndex
+                        return data_zc[param.dataIndex];
                         // return param.dataIndex
 
                     },
                     fontSize:'15px',
                     color:'#010605'
-                    // normal: {
-                    //     show: true,
-                    //     formatter: [
-                    //          '{10|这段文本采用样式10}',
-                    //     ].join('\n'),
-                    //     backgroundColor: '#eee',
-                    //     borderColor: '#555',
-                    //     borderWidth: 2,
-                    //     borderRadius: 5,
-                    //     padding: 10,
-                    //     fontSize: 18,
-                    //     shadowBlur: 3,
-                    //     shadowColor: '#888',
-                    //     shadowOffsetX: 0,
-                    //     shadowOffsetY: 3,
-                    //     textBorderColor: '#000',
-                    //     textBorderWidth: 3,
-                    //     color: '#fff'
-                    // }
                 }
             }]
         };

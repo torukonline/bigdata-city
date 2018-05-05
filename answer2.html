@@ -361,22 +361,22 @@
 									</div>
 									<div class="table-responsive">
 										<table id="table"
-											   class="table table-striped"
-											   data-toolbar="#toolbar"
-											   data-search="true"
-											   data-show-refresh="true"
-											   data-show-toggle="true"
-											   data-show-columns="true"
-											   data-show-export="true"
-											   data-detail-view="true"
-											   data-detail-formatter="政策解读：就在最近同学们五一假期玩撒欢的时候，我们迎来了一件大事。没错！聪明的同学已经知道是增值税改革了！"
-											   data-minimum-count-columns="2"
-											   data-show-pagination-switch="true"
-											   data-pagination="true"
-											   data-id-field="id"
-											   data-page-list="[10, 25, 50, 100, ALL]"
-											   data-show-footer="false"
-											   data-response-handler="responseHandler">
+											   <!--class="table table-striped"-->
+											   <!--data-toolbar="#toolbar"-->
+											   <!--data-search="true"-->
+											   <!--data-show-refresh="true"-->
+											   <!--data-show-toggle="true"-->
+											   <!--data-show-columns="true"-->
+											   <!--data-show-export="true"-->
+											   <!--data-detail-view="true"-->
+											   <!--data-detail-formatter="问卷详细信息概述"-->
+											   <!--data-minimum-count-columns="2"-->
+											   <!--data-show-pagination-switch="true"-->
+											   <!--data-pagination="true"-->
+											   <!--data-id-field="id"-->
+											   <!--data-page-list="[10, 25, 50, 100, ALL]"-->
+											   <!--data-show-footer="false"-->
+											   <!--data-response-handler="responseHandler">-->
 										</table>
 									</div>
 								</section><!--.box-typical-->
@@ -384,10 +384,30 @@
 
 						</div>
 
-
-
-
-
+						<div class="modal fade"
+							 id="myModal"
+							 tabindex="-1"
+							 role="dialog"
+							 aria-labelledby="myModalLabel"
+							 aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+											<i class="font-icon-close-2"></i>
+										</button>
+										<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+									</div>
+									<div class="modal-body">
+										...
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Close</button>
+										<button type="button" class="btn btn-rounded btn-primary">Save changes</button>
+									</div>
+								</div>
+							</div>
+						</div><!--.modal-->
 					</section>
 				</div>
 			</div>
@@ -625,7 +645,7 @@
 	<script src="js/lib/bootstrap-table/bootstrap-table.js"></script>
 	<script src="js/lib/bootstrap-table/bootstrap-table-export.min.js"></script>
 	<script src="js/lib/bootstrap-table/tableExport.min.js"></script>
-	<script src="js/lib/bootstrap-table/bootstrap-table-init.js"></script>
+	<script src="js/lib/bootstrap-table/wenjuandiaocha-table-init.js"></script>
 <script>
     // target elements with the "draggable" class
     interact('.draggable')
