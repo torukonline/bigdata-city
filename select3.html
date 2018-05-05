@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="css/separate/vendor/tags_editor.min.css">
 <link rel="stylesheet" href="css/separate/vendor/bootstrap-select/bootstrap-select.min.css">
 <link rel="stylesheet" href="css/separate/vendor/select2.min.css">
+	<link rel="stylesheet" href="css/lib/bootstrap-sweetalert/sweetalert.css">
     <link rel="stylesheet" href="css/lib/font-awesome/font-awesome.min.css">
     <link rel="stylesheet" href="css/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -275,18 +276,14 @@
 				<div class="tbl">
 					<div class="tbl-row">
 						<div class="tbl-cell">
-							<h3>Selects</h3>
-							<ol class="breadcrumb breadcrumb-simple">
-								<li><a href="#">StartUI</a></li>
-								<li><a href="#">Forms</a></li>
-								<li class="active">Selects</li>
-							</ol>
+							<h3>预警配置</h3>
 						</div>
 					</div>
 				</div>
 			</header>
 
 			<section class="card box-typical-full-height">
+				<p style="margin: 10px">当预警的关键词达到阈值，会通知相关人员</p>
 				<div class="card-block">
 					<h5 class="with-border m-t-0">选择类别</h5>
 					<div class="row">
@@ -294,9 +291,11 @@
 							<select class="select2">
 								<option>旅游</option>
 								<option>就业</option>
-								<option>Prep test</option>
-								<option>Catprep test</option>
-								<option>Long long long extra long example line long long long extra long example line </option>
+								<option>房产</option>
+								<option>教育</option>
+								<option>医疗</option>
+								<option>养老</option>
+								<option>环保</option>
 							</select>
 							<br/>
 							<br/>
@@ -305,15 +304,15 @@
 
 					</div><!--.row-->
 
-					<h5 class="with-border m-t-0">选择人员</h5>
+					<h5 class="with-border m-t-0">选择通知的人员</h5>
 					<div class="row">
 
 						<div class="col-md-3">
 							<select class="select2-photo">
-								<option data-photo="img/photo-64-1.jpg">Jenny Hess</option>
-								<option data-photo="img/photo-64-2.jpg">Elliot Fu</option>
-								<option data-photo="img/photo-64-3.jpg">Stevie Felicano</option>
-								<option data-photo="img/photo-64-4.jpg">Christian</option>
+								<option data-photo="img/photo-64-1.jpg">陈宏子</option>
+								<!--<option data-photo="img/photo-64-2.jpg">Elliot Fu</option>-->
+								<option data-photo="img/photo-64-3.jpg">秦婷婷</option>
+								<option data-photo="img/photo-64-4.jpg">张荷</option>
 							</select>
 							<br/>
 							<br/>
@@ -323,13 +322,13 @@
 					<h5 class="with-border m-t-lg">填写需要预警的关键词</h5>
 					<div class="row">
 						<div class="col-lg-12">
-							<textarea id="tags-editor-textarea">example,example,example</textarea>
+							<textarea id="tags-editor-textarea">暴力:10次,黑导游:5次,违法:2次</textarea>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="form-group" style="margin-top: 30px">
-							<button type="button" class="btn btn-inline btn-primary">保存</button>
+							<button type="button" class="btn btn-inline btn-primary" id="swal-btn-success">保存</button>
 							</div>
 						</div>
 					</div>
@@ -348,7 +347,19 @@
 	<script src="js/lib/jquery-tag-editor/jquery.tag-editor.min.js"></script>
 	<script src="js/lib/bootstrap-select/bootstrap-select.min.js"></script>
 	<script src="js/lib/select2/select2.full.min.js"></script>
-
+<script src="js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript">
+    $('#swal-btn-success').click(function(e){
+        e.preventDefault();
+        swal({
+            title: "添加成功!",
+            text: "关键词达到阀值后,系统会自动短信通知您!",
+            type: "success",
+            confirmButtonClass: "btn-success",
+            confirmButtonText: "确认"
+        });
+    });
+</script>
 	<script>
 		$(function() {
 			$('#tags-editor-textarea').tagEditor();
