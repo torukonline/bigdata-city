@@ -28,7 +28,7 @@
     <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
-                <form class="sign-box">
+                <form class="sign-box" action="index.html">
                     <div class="sign-avatar">
                         <img src="img/avatar-sign.png" alt="">
                     </div>
@@ -48,7 +48,7 @@
                             <a href="reset-password.html">重置密码</a>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-rounded">登录</button>
+                    <button type="submit"   class="btn btn-rounded" >登录</button>
                     <!--<p class="sign-note">New to our website? <a href="sign-up.html">注册</a></p>-->
                     <!--<button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
@@ -58,7 +58,11 @@
         </div>
     </div><!--.page-center-->
 
-
+<script type="text/javascript">
+    function login() {
+        window.location='index.html';
+    }
+</script>
 <script src="js/lib/jquery/jquery-3.2.1.min.js"></script>
 <script src="js/lib/popper/popper.min.js"></script>
 <script src="js/lib/tether/tether.min.js"></script>
