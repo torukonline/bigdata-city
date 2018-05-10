@@ -81,14 +81,14 @@ option = {
         x: '25%',
         textAlign: 'center'
     }, {
-        text: '正面内容来源',
+        text: '正面内容来源占比',
         subtext: '总计 ' + Object.keys(downloadJson).reduce(function (all, key) {
             return all + downloadJson[key];
         }, 0),
         x: '75%',
         textAlign: 'center'
     }, {
-        text: '负面内容来源',
+        text: '负面内容来源占比',
         subtext: '总计 ' + Object.keys(themeJson).reduce(function (all, key) {
             return all + themeJson[key];
         }, 0),

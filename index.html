@@ -299,7 +299,7 @@
 						<div class="col-sm-6">
 							<article class="statistic-box red">
 								<div>
-									<div class="number">3,427,081</div>
+									<div class="number" id="num1">427081</div>
 									<div class="caption"><div>旅游数据</div></div>
 								</div>
 							</article>
@@ -307,7 +307,7 @@
 						<div class="col-sm-6">
 							<article class="statistic-box purple">
 								<div>
-									<div class="number">2,729,137</div>
+									<div class="number" id="num2">729137</div>
 									<div class="caption"><div>房产数据</div></div>
 								</div>
 							</article>
@@ -315,7 +315,7 @@
 						<div class="col-sm-6">
 							<article class="statistic-box yellow">
 								<div>
-									<div class="number">6,352,836</div>
+									<div class="number" id="num3">352836</div>
 									<div class="caption"><div>就业数据</div></div>
 								</div>
 							</article>
@@ -323,7 +323,7 @@
 						<div class="col-sm-6">
 							<article class="statistic-box green">
 								<div>
-									<div class="number">9,235,983</div>
+									<div class="number" id="num4">235983</div>
 									<div class="caption"><div>自媒体数据</div></div>
 								</div>
 							</article>
@@ -335,7 +335,7 @@
 				<div class="col-xl-12  dahsboard-column">
 					<section class="box-typical box-typical-dashboard panel panel-default scrollable">
 						<header class="box-typical-header panel-heading">
-							<h3 class="panel-title">情感分析</h3>
+							<h3 class="panel-title">全国情感分析</h3>
 						</header>
 						<div class="box-typical-body panel-body" style="height: 600px" id="emotion">
 						</div><!--.box-typical-body-->
@@ -484,5 +484,21 @@
 	<script type="text/javascript" src="js/lib/echarts/echarts-wordcloud.min.js"></script>
 	<script type="text/javascript" src="js/lib/echarts/keychart.js"></script>
 	<script type="text/javascript" src="js/lib/echarts/emotion.js"></script>
+	<script type="text/javascript">
+
+        function hello(){
+            var num1 = parseInt(10*Math.random())
+            var num2 = parseInt(10*Math.random())
+            var num3 = parseInt(10*Math.random())
+            var num4 = parseInt(10*Math.random())
+            $("#num1").text(parseInt($("#num1").text())+num1)
+            $("#num2").text(parseInt($("#num2").text())+num2)
+            $("#num3").text(parseInt($("#num3").text())+num3)
+            $("#num4").text(parseInt($("#num4").text())+num4)
+
+        }
+        //重复执行某个方法
+        window.setInterval(hello,1000);
+	</script>
 </body>
 </html>
